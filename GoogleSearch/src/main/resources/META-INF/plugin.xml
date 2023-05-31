@@ -27,6 +27,8 @@
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
 
+
+        <postStartupActivity implementation="com.amandaprocoder.googlesearch.QuoteDisplayer"/>
     </extensions>
     <actions>
         <action id="com.amandaprocoder.googlesearch.GoogleSearch" class="com.amandaprocoder.googlesearch.GoogleSearch"

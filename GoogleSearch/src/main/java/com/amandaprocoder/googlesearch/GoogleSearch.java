@@ -10,7 +10,6 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
 import org.jetbrains.annotations.NotNull;
 
-import java.io.IOException;
 
 public class GoogleSearch extends AnAction {
 
@@ -20,6 +19,7 @@ public class GoogleSearch extends AnAction {
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent event) {
+
         Project project = event.getData(PlatformDataKeys.PROJECT);
 
         final Editor editor = event.getRequiredData(CommonDataKeys.EDITOR);
