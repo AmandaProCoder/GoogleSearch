@@ -19,6 +19,8 @@
     Enjoy!
   ]]></description>
 
+   <change-notes><![CDATA[Fixed a bug that made the plugin crash if no internet access was present when displaying a quote.]]></change-notes>
+
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>

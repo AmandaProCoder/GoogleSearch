@@ -20,7 +20,7 @@ public class Utils {
                 body = response.body().toString();
             }
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            return body;
         }
         return body;
     }

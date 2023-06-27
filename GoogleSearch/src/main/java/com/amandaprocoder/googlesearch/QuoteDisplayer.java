@@ -18,7 +18,12 @@ public class QuoteDisplayer implements StartupActivity {
         System.setProperty("java.net.useSystemProxies","true");
         //Fetch quote of the day
         String quotes = Utils.getHTTPBody("https://raw.githubusercontent.com/AmandaProCoder/GoogleSearch/main/GoogleSearch/utils/quotes.json");
-        List<Quote> lQuotes = parseQuotes(quotes);
+	if(quotes == null){
+            quotes = "[{\"quote\":\"Whatever the mind of man can conceive and believe, it can achieve...\", \"author\":\"Napoleon Hill\"}," +
+                    "{\"quote\":\"Life isn't about getting and having, it's about giving and being...\", \"author\":\"Kevin Kruse\"}," +
+                    "{\"quote\":\"Strive not to be a success, but rather to be of value...\", \"author\":\"Albert Einstein\"}]";
+        }
+	List<Quote> lQuotes = parseQuotes(quotes);
         String birthdayQuote = null;
         String birthdayQuoteAuthor = null;
         int index = 0;
